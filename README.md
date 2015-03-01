@@ -1,6 +1,6 @@
 ### RTMonitor 客户端
 
-RTMonitor 是使用Go语言编写的，内嵌到Go代码中，支持收集进程、操作系统、Golang运行时的信息库。
+RTMonitor 是使用Go语言编写的，内嵌到Go代码中，支持收集进程、操作系统、Golang运行时的状态数据的库。
 收集到数据后，会将数据传送给API Server，在RTMonitor服务端中可以使用图表的形式方便查看。
 
 目前支持收集以下信息：
