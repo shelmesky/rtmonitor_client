@@ -1,4 +1,4 @@
-package client
+package rtmonitor_client
 
 import (
     "bytes"
