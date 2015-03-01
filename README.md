@@ -1,3 +1,30 @@
+### RTMonitor 客户端
+
+RTMonitor 是使用Go语言编写的，内嵌到Go代码中，支持收集进程、操作系统、Golang运行时的信息库。
+收集到数据后，会将数据传送给API Server，在RTMonitor服务端中可以使用图表的形式方便查看。
+
+目前支持收集以下信息：
+
++ OS的内存使用
++ OS的负载
++ 进程的内存使用
++ Golang运行时的内存使用
++ Golang运行时的GC状态 
+
+### 安装方式
+
+```
+go get github.com/shelmesky/rtmonitor_client
+```
+
+在代码中使用：
+
+```
+rtmonitor_client.Start("http://apiserver/api/", "CLIENT_KEY")
+```
+
+`CLIENT_KEY`是在RTMonitor服务端中预先创建的KEY。
+
 ### 进程的内存占用
 
 ```
