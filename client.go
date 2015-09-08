@@ -56,7 +56,7 @@ func ReportSystemInfo() {
 		log.Println(err)
 	}
 
-	err = SendToServer(data)
+	err = SendToServer(data, "system")
 	if err != nil {
 		log.Println(err)
 	}
@@ -72,7 +72,7 @@ func ReportLoadInfo() {
 				log.Println(err)
 			}
 
-			err = SendToServer(data)
+			err = SendToServer(data, "load")
 			if err != nil {
 				log.Println(err)
 			}
@@ -91,7 +91,7 @@ func ReportProcessInfo() {
 				log.Println(err)
 			}
 
-			err = SendToServer(data)
+			err = SendToServer(data, "process")
 			if err != nil {
 				log.Println(err)
 			}
@@ -110,7 +110,7 @@ func ReportRuntimeInfo() {
 				log.Println(err)
 			}
 
-			err = SendToServer(data)
+			err = SendToServer(data, "runtime")
 			if err != nil {
 				log.Println(err)
 			}
@@ -120,8 +120,8 @@ func ReportRuntimeInfo() {
 	}
 }
 
-func SendToServer(data []byte) error {
-	request_url := apiServer + "/" + clientKey + "/"
+func SendToServer(data []byte, data_type string) error {
+	request_url := apiServer + "/" + clientKey + "/" + data_type + "/"
 	buf := bytes.NewReader(data)
 
 	resp, err := http.Post(request_url, "application/json", buf)
