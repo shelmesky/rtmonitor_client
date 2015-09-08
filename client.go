@@ -121,7 +121,7 @@ func ReportRuntimeInfo() {
 }
 
 func SendToServer(data []byte, data_type string) error {
-	request_url := apiServer + clientKey + "/" + data_type + "/"
+	request_url := apiServer + clientKey + "/report/" + data_type + "/"
 	buf := bytes.NewReader(data)
 
 	resp, err := http.Post(request_url, "application/json", buf)
