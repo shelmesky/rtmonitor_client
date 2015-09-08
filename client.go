@@ -16,13 +16,13 @@ import (
 )
 
 var (
-	ReportLoadInterval    = 60 * time.Second
-	ReportProcessInterval = 1 * time.Second
-	ReportRuntimeInterval = 1 * time.Second
+	ReportLoadInterval    = 30 * time.Second
+	ReportProcessInterval = 5 * time.Second
+	ReportRuntimeInterval = 5 * time.Second
 
-	load_channel    chan *lib.LoadInfo      = make(chan *lib.LoadInfo, 100)
-	process_channel chan *lib.ProcessInfo   = make(chan *lib.ProcessInfo, 100)
-	runtime_channel chan *lib.RuntimeStatus = make(chan *lib.RuntimeStatus, 100)
+	load_channel    chan *lib.LoadInfo      = make(chan *lib.LoadInfo, 128)
+	process_channel chan *lib.ProcessInfo   = make(chan *lib.ProcessInfo, 128)
+	runtime_channel chan *lib.RuntimeStatus = make(chan *lib.RuntimeStatus, 128)
 
 	apiServer string
 	clientKey string
