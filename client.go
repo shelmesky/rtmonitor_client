@@ -131,10 +131,10 @@ func SendToServer(data []byte, data_type string) error {
 	}
 
 	if resp != nil {
+		resp.Body.Close()
 		if resp.StatusCode != 200 {
 			return fmt.Errorf("Server return none 200 code: %d", resp.StatusCode)
 		}
-		resp.Body.Close()
 	}
 
 	return nil
