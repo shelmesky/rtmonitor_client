@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	ReportLoadInterval    = 30 * time.Second
+	ReportLoadInterval    = 5 * time.Second
 	ReportProcessInterval = 5 * time.Second
 	ReportRuntimeInterval = 5 * time.Second
 
