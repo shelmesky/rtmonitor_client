@@ -2,7 +2,6 @@ package load
 
 import (
 	"bytes"
-	"fmt"
 	"github.com/shelmesky/rtmonitor_client/lib"
 	"log"
 	"strconv"
