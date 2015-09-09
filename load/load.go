@@ -80,8 +80,6 @@ func GetLoadInfo(channel chan *lib.LoadInfo, sleep time.Duration) {
 			}
 		}
 
-		fmt.Println(load_info)
-
 		channel <- &load_info
 		time.Sleep(sleep)
 	}

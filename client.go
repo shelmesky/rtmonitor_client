@@ -20,9 +20,9 @@ var (
 	ReportProcessInterval = 5 * time.Second
 	ReportRuntimeInterval = 5 * time.Second
 
-	load_channel    chan *lib.LoadInfo      = make(chan *lib.LoadInfo, 128)
-	process_channel chan *lib.ProcessInfo   = make(chan *lib.ProcessInfo, 128)
-	runtime_channel chan *lib.RuntimeStatus = make(chan *lib.RuntimeStatus, 128)
+	load_channel    chan *lib.LoadInfo      = make(chan *lib.LoadInfo, 1024)
+	process_channel chan *lib.ProcessInfo   = make(chan *lib.ProcessInfo, 1024)
+	runtime_channel chan *lib.RuntimeStatus = make(chan *lib.RuntimeStatus, 1024)
 
 	apiServer string
 	clientKey string
