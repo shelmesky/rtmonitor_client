@@ -29,7 +29,6 @@ type SystemInfo struct {
 
 // 内存和CPU负载信息
 type LoadInfo struct {
-	TimeString string  `json:"time_string"`
 	MemTotal   uint64  `json:"memory_total"`
 	MemUsed    uint64  `json:"memory_used"`
 	MemFree    uint64  `json:"memory_free"`
@@ -42,16 +41,14 @@ type LoadInfo struct {
 
 // 进程的内存占用等
 type ProcessInfo struct {
-	TimeString      string `json:"time_string"`
-	Uptime          int64  `json:"uptime"`
-	VirtualMemory   int64  `json:"virtual_memory"`
-	ResisdentMemory int64  `json:"resident_memory"`
-	SharedMemory    int64  `json:"shared_memory"`
+	Uptime          int64 `json:"uptime"`
+	VirtualMemory   int64 `json:"virtual_memory"`
+	ResisdentMemory int64 `json:"resident_memory"`
+	SharedMemory    int64 `json:"shared_memory"`
 }
 
 // golang运行时的内存状态
 type RuntimeStatus struct {
-	TimeString string `json:"time_string"`
 	// General statistics
 	Alloc   uint64 `json:"alloc_bytes"`
 	Sys     uint64 `json:"sys_bytes"`

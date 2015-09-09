@@ -41,9 +41,6 @@ func GetProcessInfo(channel chan *lib.ProcessInfo, sleep time.Duration) {
 			return
 		}
 
-		now_time := lib.GetTimeString()
-		process_info.TimeString = now_time
-
 		memory_splited := strings.Split(string(data), " ")
 
 		if len(memory_splited) > 0 {

@@ -22,8 +22,6 @@ func GetRuntimeStats(channel chan *lib.RuntimeStatus, sleep time.Duration) {
 
 		now := time.Now()
 
-		runtime_status.TimeString = lib.GetTimeString()
-
 		runtime_status.Alloc = memStats.Alloc
 		runtime_status.Sys = memStats.Sys
 		runtime_status.Mallocs = memStats.Mallocs

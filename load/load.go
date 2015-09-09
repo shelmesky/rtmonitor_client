@@ -22,9 +22,6 @@ func GetLoadInfo(channel chan *lib.LoadInfo, sleep time.Duration) {
 			return
 		}
 
-		now_time := lib.GetTimeString()
-		load_info.TimeString = now_time
-
 		meminfo_total_splited := bytes.Fields(meminfo_data[0])
 		meminfo_free_splited := bytes.Fields(meminfo_data[1])
 		meminfo_buffers_splited := bytes.Fields(meminfo_data[2])
